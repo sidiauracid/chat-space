@@ -1,0 +1,17 @@
+.side-bar
+  .side-bar__user-name
+    .name-items
+      .name-items__user-name
+        name
+      .name-items__icon
+        = link_to "#", class: "edit-btn" do
+          = icon('far', 'edit',  class: "edit-btn__icon")
+        = link_to "#", class: "cog-btn" do
+          = icon('fas', 'cog',  class: "cog-btn__icon")
+  .side-bar__group-list
+    = link_to "#" do
+      .group
+        %p.group__group-name
+          techcamp
+        %p.group__last-message
+          まだメッセージがありません
