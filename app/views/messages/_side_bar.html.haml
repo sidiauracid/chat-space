@@ -9,9 +9,10 @@
         = link_to edit_user_path(current_user), class: "cog-btn" do
           = icon('fas', 'cog',  class: "cog-btn__icon")
   .side-bar__group-list
-    = link_to "#" do
-      .group
-        %p.group__group-name
-          techcamp
-        %p.group__last-message
-          まだメッセージがありません
+    - current_user.groups.each do |group|
+      = link_to "#" do
+        .group
+          %p.group__group-name
+            = group.name
+          %p.group__last-message
+            まだメッセージがありません
