@@ -13,8 +13,7 @@
         Edit
 
   .chat-main__message-list
-    .message
-      = render @messages
+    = render @messages
   .chat-main__message-form
     = form_for [@group, @message], class: 'form' do |f|
       .input-box
